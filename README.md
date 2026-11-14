@@ -8,6 +8,31 @@ Users can interact with the application through a simple chat interface and rece
 
 - **AI-Powered Recommendations:** Generates personalized book suggestions using a Large Language Model.
 - **Semantic Search:** Understands the meaning and context of user queries instead of relying only on keywords.
+- **RAG-Based Retrieval:# 📚 BookBuddy AI – AI-Powered Book Discovery and Recommendation System
+
+BookBuddy AI is an intelligent book discovery and recommendation system that helps users find English books based on their interests and natural-language queries. It combines Semantic Search, Retrieval-Augmented Generation (RAG), and Generative AI to provide relevant and personalized book recommendations.
+
+Users can interact with the application through a simple chat interface and receive book suggestions along with descriptions, ratings, authors, and available cover images.
+
+## 🌐 Live Demo
+
+**Try BookBuddy AI here:** [Open BookBuddy AI](https://bookbuddy-ai.streamlit.app/)
+
+## 📸 Application Screenshots
+
+### 1. BookBuddy Home Page
+![BookBuddy Home Page](Screenshots/user%20interface.png)
+
+### 2. Book Recommendations
+![BookBuddy Recommendations](Screenshots/book.png)
+
+### 3. Recommended Book Details
+![BookBuddy Book Details](Screenshots/books.png)
+
+## 🚀 Features
+
+- **AI-Powered Recommendations:** Generates personalized book suggestions using a Large Language Model.
+- **Semantic Search:** Understands the meaning and context of user queries.
 - **RAG-Based Retrieval:** Combines relevant book retrieval with AI-generated responses.
 - **Vector Similarity Search:** Uses FAISS to retrieve the top five relevant books.
 - **Interactive Interface:** Provides a user-friendly chatbot using Streamlit.
@@ -24,7 +49,7 @@ Users can interact with the application through a simple chat interface and rece
 | Sentence Transformers | Text embedding generation |
 | all-MiniLM-L6-v2 | Embedding model |
 | FAISS | Vector similarity search |
-| Groq API | LLM integration and recommendation generation |
+| Groq API | LLM integration |
 | openai/gpt-oss-20b | Language model |
 | NumPy | Numerical operations |
 | Pickle | Book metadata storage |
@@ -36,8 +61,8 @@ Users can interact with the application through a simple chat interface and rece
 BookBuddy follows a Retrieval-Augmented Generation (RAG) architecture.
 
 1. **Dataset Preprocessing:** The English book dataset is cleaned and prepared using Pandas.
-2. **Embedding Generation:** Sentence Transformers converts book information into numerical vector embeddings.
-3. **Vector Database:** FAISS stores the embeddings and enables efficient similarity searching.
+2. **Embedding Generation:** Sentence Transformers converts book information into numerical embeddings.
+3. **Vector Database:** FAISS stores the embeddings for efficient similarity searching.
 4. **Book Retrieval:** User queries are converted into embeddings, and the top five relevant books are retrieved.
 5. **AI Recommendation:** Retrieved book information is passed to the Groq API to generate personalized recommendations.
 6. **Result Display:** Streamlit displays recommendations, explanations, book details, and available cover images.
@@ -62,6 +87,11 @@ BookBuddy-AI/
 │   ├── books.index
 │   └── book_metadata.pkl
 │
+├── screenshots/
+│   ├── home.png
+│   ├── recommendations.png
+│   └── book-details.png
+│
 ├── app.py
 ├── requirements.txt
 ├── .gitignore
@@ -82,13 +112,13 @@ git clone https://github.com/srilakshmig2474/-BookBuddy-AI-Powered-Book-Discover
 cd -BookBuddy-AI-Powered-Book-Discovery-System
 ```
 
-### 3. Create a Virtual Environment
+### 3. Create and Activate a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate it on Windows:
+On Windows:
 
 ```bash
 venv\Scripts\activate
@@ -138,6 +168,7 @@ http://localhost:8501
 - Recommend mystery books with detective stories.
 - I want science fiction books about space and technology.
 - Suggest books with inspiring life lessons.
+- Recommend comedy books.
 
 ## 🔮 Future Enhancements
 
